@@ -17,12 +17,16 @@ public class UserController {
 //    }
 
     @GetMapping("/users")
-        public String getAllUser(@RequestParam(defaultValue = "1") String page,
-                                 @RequestParam(defaultValue = "10") String item_per_page) {
+        public PagingResponse getAllUser(@RequestParam(defaultValue = "1") int page,
+                                         @RequestParam(defaultValue = "10") int item_per_page) {
+
+        PagingResponse pagingResponse = new PagingResponse(page, item_per_page);
         List<UsersResponse> users = new ArrayList<>();
         users.add(new UsersResponse(1, "User 1"));
         users.add(new UsersResponse(2, "User 2"));
-        return users + "Page: " + page + " itemPerPage: " + item_per_page;
+        users.add(new UsersResponse(3, "User 3"));
+        pagingResponse.setUsersResponse(users);
+        return pagingResponse;
     }
 
 //    @GetMapping("/users")
