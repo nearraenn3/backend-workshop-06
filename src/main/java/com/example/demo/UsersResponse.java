@@ -4,9 +4,9 @@ public class UsersResponse {
     private int id;
     private String name;
 
-    public UsersResponse(int i, String s) {
-        this.id = i;
-        this.name = s;
+    public UsersResponse(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     // POJO (Plain Old Java Object)
