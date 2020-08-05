@@ -44,3 +44,11 @@ Deployment
             "name": "User 2"
         }
     ]
+* Pathvariable
+    * "users/{id}" ตรง id คือ Path variable
+    ```js
+    @GetMapping("/users/{id}")
+    public UsersResponse getUserById(@PathVariable int id) {
+        return new UsersResponse(id, "User " + id);
+    }
+    ```
