@@ -1,14 +1,14 @@
-##Step
+## Step
 * gradlew (checking)
 * gradlew test (checking)
 * gradlew bootRun (start test and u can check it on localhost:8080)
 * set java_home=<path> (install or set jdk)
 
-##Run in production
+## Run in production
 * gradlew bootJar สร้าง Jar file
 * java -jar build\libs\demo 
 
-##Open URL
+## Open URL
 * localhost:8080 for checking in a web browser
 
 ##Why Spring-boot?
@@ -20,8 +20,8 @@
     * Using Spring Boot
     * Spring Boot Features
 
-##Note
-Deployment
+## Note
+### Deployment
 * EAR, E => Enterprise (Biggest)
     * WAR, W => Web (Bigger)
         * JAR, J => Java (Big)
@@ -52,3 +52,5 @@ Deployment
         return new UsersResponse(id, "User " + id);
     }
     ```
+## Note
+* Autowired => 
